@@ -48,9 +48,8 @@ public class ShoppingCartManualTest {
             failedCount++;
         }
 
-        // Test 4: คำนวณแบบมีส่วนลด "BOGO" ซื้อ 1 แถม 1 
+        // Test 4: คำนวณแบบมีส่วนลด "BOGO" ซื้อ 1 แถม 1 เมื่อซื้อสินค้าเป็นจำนวนคู่
         ArrayList<CartItem> BOGOevenCart = new ArrayList<>();
-        
         BOGOevenCart.add(new CartItem("BOGO", "butter", 20.0, 4));
         double total4 = ShoppingCartCalculator.calculateTotalPrice(BOGOevenCart);
         if ( total4 == 40.0) {
@@ -61,7 +60,7 @@ public class ShoppingCartManualTest {
             failedCount++;
         }
 
-        // Test 5: คำนวณแบบมีส่วนลด "BOGO" ซื้อ 1 แถม 1 
+        // Test 5: คำนวณแบบมีส่วนลด "BOGO" ซื้อ 1 แถม 1 เมื่อซื้อสินค้าเป็นจำนวนคี่
         ArrayList<CartItem> BOGOoddCart = new ArrayList<>();
         BOGOoddCart.add(new CartItem("BOGO", "butter", 20.0, 5));
         double total5 = ShoppingCartCalculator.calculateTotalPrice(BOGOoddCart);
